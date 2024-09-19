@@ -1,0 +1,19 @@
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:cohrs.co
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} (www\.)?cohrs.co
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+RewriteCond %{REQUEST_URI} !dist/
+RewriteRule (.*) /dist/$1 [L]
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELLOW SSL_REDIRECT:cohrs.co
+
+# Rules for API proxy
+RewriteRule ^/api http://127.0.0.1:3000/ [P,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule (.*)$ http://127.0.0.1:3000/$1 [P,L]
+

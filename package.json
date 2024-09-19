@@ -1,0 +1,27 @@
+{
+  "name": "cohrs.co",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:cohrs/cohrs.co.git",
+  "author": "Cohrs, Stephen <stephen.cohrs@outfrontmedia.com>",
+  "license": "MIT",
+  "scripts": {
+    "api": "node ./srv",
+    "api:local": "nodemon ./srv",
+    "webhook:watch": "nodemon ./srv/webhook.js",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-healthcheck": "^0.1.0",
+    "git-web-hooks": "^0.1.1",
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.32.8"
+  }
+}

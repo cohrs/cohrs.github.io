@@ -1,0 +1,53 @@
+html,
+body {
+    font-family: 'Quicksand', sans-serif;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    /*background: url(http://res.cloudinary.com/cohrs/image/upload/v1498877337/confused_travolta_seinfeld.gif);
+background: url(http://res.cloudinary.com/cohrs/image/upload/v1498877996/travolta_seinfeld.gif);*/
+    background: url(~/images/logo.png) #000;
+    background-repeat: round;
+    // background-position: 70% 50%;
+
+}
+
+video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /*left:50%;
+transform:translateX(-50%);*/
+    /*opacity: .3;*/
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+    object-position: top;
+    opacity: .93;
+}
+
+@media (max-aspect-ratio: 94/77) {
+    video {
+        left: 50%;
+        transform: translateX(-60%);
+        width: auto;
+        /*display: none;*/
+    }
+}
+
+div {
+    /*background: url(/web/20190716215234im_/http://cohrs.co/logo.png);*/
+    background-position: center;
+    opacity: .05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
